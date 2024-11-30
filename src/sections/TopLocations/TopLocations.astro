@@ -1,0 +1,21 @@
+---
+import SectionStructure from '../../structures/SectionStructure.astro';
+import { TopLocationsCarousel } from './Swiper';
+---
+
+<SectionStructure idSection="tour-service" wrapperClasses="overflow-hidden">
+  <div class="shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-md flex flex-col gap-16 lg:flex-row lg:justify-between lg:items-center p-8 xl:px-16 lg:py-12 overflow-hidden">
+    <article class="w-full lg:w-4/12 xl:w-3/12 flex flex-col justify-between gap-6">
+      <span class="text-xs lg:text-sm xl:text-base text-[#606773] font-medium">AREAS AND DEVELOPMENTS</span>
+      <h2 class="Giyaste text-3xl leading-tight tracking-[0.3rem] text-blue xl:text-4xl xl:leading-tight xl:font-light xl:tracking-[0.5rem]">
+        TOP LOCATIONS
+        <br />
+        FOR ROI IN DUBAI
+      </h2>
+    </article>
+
+    <article class="flex flex-col gap-4 justify-center items-center w-full lg:w-8/12 xl:w-9/12 lg:gap-8 lg:justify-center">
+      <TopLocationsCarousel client:only="react" />
+    </article>
+  </div>
+</SectionStructure>
