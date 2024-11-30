@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMobile from '../components/header/NavbarMobile.astro';
+import NavbarDesktop from '../components/header/NavbarDesktop.astro';
+import Book from '../sections/Book/Book.astro';
+import WhyUs from '../sections/WhyUs.astro';
+import Home from '../sections/Home/Home.astro';
+---
+
+<Layout title="">
+  <!-- ? navbar mobile -->
+  <NavbarMobile isLanding={true} />
+
+  <!-- ? Header section desktop-->
+  <NavbarDesktop isLanding={true} />
+
+  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+    <Home />
+    <WhyUs />
+    <Book />
+  </main>
+</Layout>

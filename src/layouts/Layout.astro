@@ -1,0 +1,75 @@
+---
+import { fade } from 'astro:transitions';
+import { Toaster, toast } from 'sonner';
+
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <script defer src="/scripts/navbar.js"></script>
+    <script defer src="/scripts/send-form.js"></script>
+    <script defer src="/scripts/cookies.js"></script>
+    <script defer src="https://shualim.online/devs-mx-resources/notify/notify.js"></script>
+
+    <!-- ? Scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--? Styles -->
+    <link rel="stylesheet" href="https://shualim.online/devs-mx-resources/notify/notify.css" />
+    <link rel="stylesheet" href="/styles/globals.css" />
+
+    <!-- ? Adobe Fonts -->
+    <link rel="stylesheet" href="https://use.typekit.net/znb0tzz.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="overflow flex flex-col items-center Satoshi-regular" transition:animate={fade({ duration: '0.5s' })}>
+    <Toaster position="top-right" client:only="react" />
+    <slot />
+    <!-- ! Footer -->
+    <Footer />
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        // @ts-expect-error
+        ScrollReveal().reveal('.animate-section', {
+          duration: 800,
+          origin: 'bottom',
+          distance: '50px',
+          easing: 'ease-in-out',
+          reset: false,
+        });
+
+        // @ts-expect-error
+        ScrollReveal().reveal('.animate-hero', {
+          duration: 600,
+          origin: 'left',
+          distance: '30px',
+          easing: 'ease-in-out',
+          reset: false,
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  section {
+    scroll-margin-top: 100px;
+  }
+</style>
