@@ -1,0 +1,71 @@
+---
+import HeroStructure from '../structures/HeroStructure.astro';
+---
+
+<!-- ? Home section -->
+<HeroStructure id="home-section" sectionClasses="home-section">
+  <div class="p-3 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-md h-max w-full flex flex-col lg:flex-row items-center gap-8 home-section">
+    <article class="w-full flex flex-col items-center gap-5 lg:w-6/12 px-4 h-max lg:px-0">
+      <div class="flex justify-center gap-4">
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+          class="w-3 h-3 lg:w-4 lg:h-4 object-contain"
+          alt="Star icon"
+        />
+
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+          class="w-3 h-3 lg:w-4 lg:h-4 object-contain"
+          alt="Star icon"
+        />
+
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMTUgMTUiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Im03LjUgMGwtMiA1aC01bDQgMy41bC0yIDZsNS0zLjVsNSAzLjVsLTItNmw0LTMuNWgtNXoiLz48L3N2Zz4="
+          class="w-3 h-3 lg:w-4 lg:h-4 object-contain"
+          alt="Star icon"
+        />
+      </div>
+
+      <h1 class="Giyaste text-center text-4xl leading-snug tracking-widest text-blue lg:text-4xl xl:text-6xl xl:leading-tight xl:font-light xl:tracking-[0.5rem]">
+        YOUR GATEWAY TO SMART PROPERTY INVESTMENTS IN DUBAI.
+      </h1>
+
+      <p class="text-[#606773] font-medium text-center mt-1 lg:text-lg xl:px-6">Experience the confidence of a fully guided journey into one of the world’s most dynamic real estate markets.</p>
+
+      <div class="w-max gap-[0.5px] self-center lg:p-0 lg:gap-0.5 mt-5 flex hover:scale-95 transition-all duration-200">
+        <a class="flex font-light text-lg lg:text-xl xl:text-2xl xl:font-medium justify-center items-center bg-[#03264D] rounded-md py-3 px-6 lg:py-5 text-white" href="#packages-section">
+          DISCOVER MORE
+        </a>
+        <div class="bg-[#03264D] flex justify-center items-center rounded-r-sm rounded-l-md p-1 px-4 lg:px-6 text-white">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im04LjAwNiAyMS4zMDhsLTEuMDY0LTEuMDY0TDE1LjE4NyAxMkw2Ljk0MiAzLjc1NmwxLjA2NC0xLjA2NEwxNy4zMTQgMTJ6Ii8+PC9zdmc+"
+            class="object-contain w-6 h-6"
+            alt=""
+          />
+        </div>
+      </div>
+    </article>
+
+    <article class="w-full flex flex-col items-center gap-5 lg:w-6/12 px-4 h-full">
+      <img src="/public/assets/hero-bg.png" class="object-cover h-full" alt="" />
+    </article>
+  </div>
+</HeroStructure>
+
+<style>
+  .home-section {
+    min-height: max-content;
+  }
+  @media (min-width: 1524px) {
+    .home-section {
+      height: calc(100vh - 120px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .home-section {
+      height: calc(100vh - 120px);
+      min-height: 800px;
+    }
+  }
+</style>
