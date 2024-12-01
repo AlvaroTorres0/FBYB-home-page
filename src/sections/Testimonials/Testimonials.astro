@@ -1,7 +1,6 @@
 ---
 import SectionStructure from '../../structures/SectionStructure.astro';
-import LargeTerminial from './testimonials-cards/LargeTestimonial.astro';
-import ShortTestimonial from './testimonials-cards/ShortTestimonial.astro';
+import TestimonialsList from './TestimonialsList';
 
 import { getCollection } from 'astro:content';
 
@@ -22,18 +21,6 @@ const testimonials = await getCollection('testimonials');
       </p>
     </div>
 
-    <article class="mt-12 flex flex-wrap justify-center items-center gap-10">
-      {
-        testimonials.map((testimonial, index) => {
-          if (index > 3) return;
-
-          if (testimonial.data.isShortMessage) {
-            return <ShortTestimonial testimonial={testimonial.data} opacity />;
-          } else {
-            return <LargeTerminial testimonial={testimonial.data} opacity />;
-          }
-        })
-      }
-    </article>
+    <TestimonialsList client:load testimonials={testimonials} />
   </div>
 </SectionStructure>
