@@ -1,0 +1,59 @@
+---
+import { z } from 'zod';
+import { PropertyInsightSchema } from '../../d';
+
+type Property = z.infer<typeof PropertyInsightSchema>;
+
+interface Props {
+  property: Property;
+}
+
+const { property } = Astro.props;
+---
+
+<article
+  class={`w-full max-w-[450px] h-max lg:min-w-full p-5 xl:p-8 rounded-md shadow-[0px_20px_30px_-5px_#00000033] flex ${property.rowCard ? 'flex-col lg:flex-row gap-3 xl:gap-6' : 'flex-col gap-2'}`}
+>
+  <img src={property.imageUrlMobile} alt={property.imageAltText} class={`rounded-md lg:hidden object-cover ${property.rowCard ? 'h-full w-full lg:w-6/12' : 'w-full h-2/4'}`} />
+
+  <img src={property.imageUrlDesktop} alt={property.imageAltText} class={`rounded-md hidden lg:block object-cover ${property.rowCard ? 'h-full w-full lg:w-6/12' : 'w-full h-2/4'}`} />
+
+  <div class={`flex flex-col gap-3 ${property.rowCard ? 'h-full w-full lg:w-6/12' : 'w-full h-2/4'}`}>
+    <div class="flex gap-2 text-[#7C8997] text-xs">
+      <span>{property.date}</span>
+      <span>•</span>
+      <span>{property.readTime}</span>
+    </div>
+
+    <h5 class="mt-6 text-blueBg font-semibold text-2xl leading-snug">
+      {property.title}
+    </h5>
+
+    <p class="text-[#606773] text-lg leading-snug">
+      {property.description}
+    </p>
+
+    <button
+      class={`rounded-md py-2 max-w-max w-full px-4 flex items-center gap-2 mt-3 hover:scale-105 transition-all duration-200 ${property.buttonBlue ? 'bg-[#002348] text-yellow' : 'border-[1px] border-[#0023484D] bg-transparent text-blueBg'}`}
+    >
+      <span class="font-medium">
+        {property.buttonText}
+      </span>
+      {
+        property.buttonBlue ? (
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNFOEQ2QUQiIGQ9Ik0xNS4xODcgMTJMNy40NyA0LjI4NXEtLjIyMS0uMjIxLS4yMTgtLjUzMnEuMDAzLS4zMS4yMjQtLjUzMlE3LjY5OCAzIDguMDA5IDNxLjMxIDAgLjUzMi4yMjFsNy42MzYgNy42NDNxLjI0Mi4yNDIuMzU0LjU0dC4xMTEuNTk2dC0uMTExLjU5NnQtLjM1NC41NEw4LjUzNSAyMC43OHEtLjIyMi4yMjEtLjUzLjIxOHEtLjMwNy0uMDAzLS41MjgtLjIyNHQtLjIyMS0uNTMydC4yMjEtLjUzMXoiLz48L3N2Zz4="
+            alt="Arrow icon"
+            class="object-contain h-6 w-6"
+          />
+        ) : (
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Ik0xNS4xODcgMTJMNy40NyA0LjI4NXEtLjIyMS0uMjIxLS4yMTgtLjUzMnEuMDAzLS4zMS4yMjQtLjUzMlE3LjY5OCAzIDguMDA5IDNxLjMxIDAgLjUzMi4yMjFsNy42MzYgNy42NDNxLjI0Mi4yNDIuMzU0LjU0dC4xMTEuNTk2dC0uMTExLjU5NnQtLjM1NC41NEw4LjUzNSAyMC43OHEtLjIyMi4yMjEtLjUzLjIxOHEtLjMwNy0uMDAzLS41MjgtLjIyNHQtLjIyMS0uNTMydC4yMjEtLjUzMXoiLz48L3N2Zz4="
+            alt="Arrow icon"
+            class="object-contain h-6 w-6"
+          />
+        )
+      }
+    </button>
+  </div>
+</article>

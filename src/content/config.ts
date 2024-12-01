@@ -1,9 +1,9 @@
 import { defineCollection } from 'astro:content';
-import { ExampleSchema } from '../d';
+import { PropertyInsightSchema } from '../d';
 
-const collectionExample = defineCollection({
+const propertiesInsight = defineCollection({
   type: 'data',
-  schema: ExampleSchema,
+  schema: PropertyInsightSchema,
 });
 
-export const collections = { collectionExample };
+export const collections = { propertiesInsight };

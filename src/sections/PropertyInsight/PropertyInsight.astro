@@ -1,0 +1,55 @@
+---
+import SectionStructure from '../../structures/SectionStructure.astro';
+import PropertyCard from './PropertyCard.astro';
+import { getCollection } from 'astro:content';
+
+const propertiesInsights = await getCollection('properties-insights');
+---
+
+<SectionStructure idSection="property-insight">
+  <div class="rounded-md flex flex-col gap-16 lg:justify-between lg:items-start xl:px-16 lg:py-12 w-full">
+    <h2 class="text-[#606773] text-sm md:text-base lg:text-lg xl:text-xl font-medium text-center w-full">PROPERTY INSIGHTS & ANALYSIS</h2>
+
+    <article class="flex flex-col gap-16 justify-center items-center w-full lg:flex-row lg:gap-8 xl:gap-12 lg:justify-center">
+      <div class="w-full flex justify-center lg:w-6/12">
+        <PropertyCard
+          property={{
+            imageUrlMobile: '/public/assets/properties/first-m.png',
+            imageUrlDesktop: '/public/assets/properties/first.png',
+            imageAltText: 'Property Insight 1',
+            date: '22 Nov 2024',
+            readTime: '2 min read',
+            title: 'Dubai’s Real Estate Trends 2025: Key Insights for Investors',
+            description: 'A comprehensive look at Dubai’s market trends for 2024, analyzing growth sectors and investment opportunities.',
+            buttonText: 'Read More',
+            buttonBlue: true,
+            rowCard: false,
+          }}
+        />
+      </div>
+
+      <div class="w-full lg:w-6/12 flex flex-col items-center gap-16">
+        {
+          propertiesInsights.map(property => {
+            return (
+              <PropertyCard
+                property={{
+                  imageUrlMobile: property.data.imageUrlMobile,
+                  imageUrlDesktop: property.data.imageUrlDesktop,
+                  imageAltText: property.data.imageAltText,
+                  date: property.data.date,
+                  readTime: property.data.readTime,
+                  title: property.data.title,
+                  description: property.data.description,
+                  buttonText: property.data.buttonText,
+                  buttonBlue: property.data.buttonBlue,
+                  rowCard: property.data.rowCard,
+                }}
+              />
+            );
+          })
+        }
+      </div>
+    </article>
+  </div>
+</SectionStructure>
