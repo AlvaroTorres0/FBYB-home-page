@@ -1,0 +1,39 @@
+---
+import SectionStructure from '../../structures/SectionStructure.astro';
+import LargeTerminial from './testimonials-cards/LargeTestimonial.astro';
+import ShortTestimonial from './testimonials-cards/ShortTestimonial.astro';
+
+import { getCollection } from 'astro:content';
+
+const testimonials = await getCollection('testimonials');
+---
+
+<SectionStructure idSection="property-insight">
+  <div class="rounded-md flex flex-col items-center gap-12 xl:px-16 lg:py-12 w-full">
+    <span class="text-sm xl:text-base text-[#606773] font-medium">TESTIMONIALS</span>
+    <h2 class="Giyaste text-3xl leading-tight tracking-[0.3rem] xl:w-9/12 text-center text-blue xl:text-4xl xl:leading-tight xl:font-light xl:tracking-[0.5rem]">
+      SEE HOW FLY BEFORE YOU BUY HAS TRANSFORMED THE INVESTMENT JOURNEYS OF CLIENTS WORLDWIDE.
+    </h2>
+
+    <div class="flex items-center gap-3">
+      <img src="/public/assets/testimonials/group-people.svg" class="w-10 h-10 object-contain lg:h-12 lg:w-12 xl:h-12 xl:w-12" alt="Group people icon" />
+      <p class="text-blueBg lg:text-lg">
+        <span class="font-semibold">2,000+ investors</span> trust Fly Before You Buy
+      </p>
+    </div>
+
+    <article class="mt-12 flex flex-wrap justify-center items-center gap-10">
+      {
+        testimonials.map((testimonial, index) => {
+          if (index > 3) return;
+
+          if (testimonial.data.isShortMessage) {
+            return <ShortTestimonial testimonial={testimonial.data} opacity />;
+          } else {
+            return <LargeTerminial testimonial={testimonial.data} opacity />;
+          }
+        })
+      }
+    </article>
+  </div>
+</SectionStructure>

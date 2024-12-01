@@ -12,3 +12,11 @@ export const PropertyInsightSchema = z.object({
   imageUrlDesktop: z.string(),
   imageAltText: z.string().optional(),
 });
+
+export const TestimonialCardSchema = z.object({
+  isShortMessage: z.boolean(),
+  name: z.string(),
+  subject: z.string().nullable(),
+  message: z.string(),
+  socialMedia: z.enum(['messenger', 'chat', 'email']),
+});

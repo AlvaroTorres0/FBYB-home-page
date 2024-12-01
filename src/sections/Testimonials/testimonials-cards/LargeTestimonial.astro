@@ -1,0 +1,65 @@
+---
+import { z } from 'zod';
+import { TestimonialCardSchema } from '../../../d';
+
+type TestimonialCard = z.infer<typeof TestimonialCardSchema>;
+
+interface Props {
+  testimonial: TestimonialCard;
+  opacity?: boolean;
+}
+
+const { testimonial, opacity } = Astro.props;
+---
+
+<article class="relative max-w-3xl mx-auto bg-gray-50 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col w-full lg:flex-row">
+  <div class="flex gap-4 p-6 w-full lg:w-4/12">
+    <div class="flex gap-4 h-max items-end">
+      <div class="w-6 h-6 flex items-center justify-center">
+        <img src="/public/assets/testimonials/email.svg" alt="Email icon" />
+      </div>
+
+      <div class="flex flex-col mt-1 gap-2">
+        <p class="text-md text-[#7C8997] font-normal">From:</p>
+        <span class="text-lg font-semibold text-blueBg xl:text-2xl">{testimonial.name}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-[#0023484D] w-full lg:w-8/12 relative">
+    <div class="p-6 flex flex-col gap-3 overflow-hidden relative">
+      {
+        testimonial.subject && (
+          <div class="flex items-center gap-2">
+            <div class="bg-[#606773] rounded-md py-1.5 px-2 text-[#FFFFFF]">
+              <span class="font-medium">Subject:</span>
+            </div>
+            <h5 class="font-semibold text-lg text-[#606773]">{testimonial.subject}</h5>
+          </div>
+        )
+      }
+      <p class={`text-[#606773] text-base ${opacity ? 'fade-mask' : ''}`}>
+        {
+          testimonial.message.split('\n').map((line, index) => (
+            <>
+              {line}
+              {index < testimonial.message.split('\n').length - 1 && <br />}
+            </>
+          ))
+        }
+      </p>
+    </div>
+  </div>
+</article>
+
+<style>
+  .fade-mask {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+</style>
