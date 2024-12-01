@@ -3,7 +3,13 @@ import EmailTestimonial from './testimonials-cards/EmailTestimonial';
 import SocialMediaTestimonial from './testimonials-cards/SocialMediaTestimonial';
 
 const TestimonialSection = ({ testimonials, isIndexSection }) => {
-  const [visibleTestimonials, setVisibleTestimonials] = useState(testimonials.length);
+  const [visibleTestimonials, setVisibleTestimonials] = useState(4);
+  const [showLoadMoreButton, setShowLoadMoreButton] = useState(true);
+
+  function handleLoadMore() {
+    setVisibleTestimonials(testimonials.length);
+    setShowLoadMoreButton(false);
+  }
 
   useEffect(() => {
     if (!isIndexSection) return;
@@ -40,20 +46,28 @@ const TestimonialSection = ({ testimonials, isIndexSection }) => {
         }
       })}
 
-      <a href="/testimonials.html" className="gap-[0.5px] w-full max-w-[330px] self-center lg:p-0 lg:gap-0.5 mt-5 flex hover:scale-95 transition-all duration-200 absolute bottom-0 lg:right-0">
-        <span className="flex font-medium xl:text-lg justify-center items-center bg-[#FFFFFF] rounded-md py-3 px-6 lg:py-4 text-blueBg border-[1px] border-blueBg w-full lg:w-max">
-          View Testimonials
-        </span>
-        <div className="bg-[#FFFFFF] flex justify-center items-center rounded-r-sm rounded-l-md p-1 px-4 lg:px-6 border-[1px] border-blueBg">
-          <div className="bg-blueBg rounded-sm p-1">
-            <img
-              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im04LjAwNiAyMS4zMDhsLTEuMDY0LTEuMDY0TDE1LjE4NyAxMkw2Ljk0MiAzLjc1NmwxLjA2NC0xLjA2NEwxNy4zMTQgMTJ6Ii8+PC9zdmc+"
-              className="object-contain w-6 h-6"
-              alt="Arrow icon"
-            />
+      {showLoadMoreButton && !isIndexSection && (
+        <button onClick={handleLoadMore} className="py-3 border-[1px] border-blueBg text-blueBg rounded-md font-medium px-4 hover:scale-105 transition-all duration-200">
+          Load More
+        </button>
+      )}
+
+      {isIndexSection && (
+        <a href="/testimonials.html" className="gap-[0.5px] w-full max-w-[330px] self-center lg:p-0 lg:gap-0.5 mt-5 flex hover:scale-95 transition-all duration-200 absolute bottom-0 lg:right-0">
+          <span className="flex font-medium xl:text-lg justify-center items-center bg-[#FFFFFF] rounded-md py-3 px-6 lg:py-4 text-blueBg border-[1px] border-blueBg w-full lg:w-max">
+            View Testimonials
+          </span>
+          <div className="bg-[#FFFFFF] flex justify-center items-center rounded-r-sm rounded-l-md p-1 px-4 lg:px-6 border-[1px] border-blueBg">
+            <div className="bg-blueBg rounded-sm p-1">
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im04LjAwNiAyMS4zMDhsLTEuMDY0LTEuMDY0TDE1LjE4NyAxMkw2Ljk0MiAzLjc1NmwxLjA2NC0xLjA2NEwxNy4zMTQgMTJ6Ii8+PC9zdmc+"
+                className="object-contain w-6 h-6"
+                alt="Arrow icon"
+              />
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      )}
     </article>
   );
 };

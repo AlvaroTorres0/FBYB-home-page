@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMobile from '../components/header/NavbarMobile.astro';
+import NavbarDesktop from '../components/header/NavbarDesktop.astro';
+import TestimonialsSection from '../sections/Testimonials/TestimonialsSection.astro';
+import TakeFirstStep from '../sections/TakeFirstStep.astro';
+---
+
+<Layout title="">
+  <!-- ? navbar mobile -->
+  <NavbarMobile isLanding={true} />
+
+  <!-- ? Header section desktop-->
+  <NavbarDesktop isLanding={true} />
+
+  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12 mt-12">
+    <TestimonialsSection isIndexSection={false} />
+    <TakeFirstStep />
+  </main>
+</Layout>
