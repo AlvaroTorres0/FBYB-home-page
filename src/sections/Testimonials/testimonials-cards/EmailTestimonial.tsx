@@ -7,10 +7,10 @@ type TestimonialCard = z.infer<typeof TestimonialCardSchema>;
 
 interface Props {
   testimonial: TestimonialCard;
-  opacity?: boolean;
+  lastComment?: boolean;
 }
 
-const EmailTestimonial: React.FC<Props> = ({ testimonial, opacity = false }) => {
+const EmailTestimonial: React.FC<Props> = ({ testimonial, lastComment = false }) => {
   return (
     <article className="relative max-w-3xl mx-auto bg-gray-50 rounded-lg shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex flex-col w-full lg:flex-row">
       <div className="flex gap-4 p-6 w-full lg:w-4/12">
@@ -36,7 +36,7 @@ const EmailTestimonial: React.FC<Props> = ({ testimonial, opacity = false }) => 
               <h5 className="font-semibold text-lg text-[#606773]">{testimonial.subject}</h5>
             </div>
           )}
-          <p className={`text-[#606773] text-base ${opacity ? 'fade-mask-email' : ''}`}>
+          <p className={`text-[#606773] text-base ${lastComment ? 'fade-mask-email' : ''}`}>
             {testimonial.message.split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}

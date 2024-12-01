@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import EmailTestimonial from './testimonials-cards/EmailTestimonial';
 import SocialMediaTestimonial from './testimonials-cards/SocialMediaTestimonial';
 
-const TestimonialSection = ({ testimonials }) => {
-  const [visibleTestimonials, setVisibleTestimonials] = useState(4);
+const TestimonialSection = ({ testimonials, isIndexSection }) => {
+  const [visibleTestimonials, setVisibleTestimonials] = useState(testimonials.length);
 
   useEffect(() => {
+    if (!isIndexSection) return;
+
     const updateVisibleTestimonials = () => {
       if (window.innerWidth < 1020) {
         setVisibleTestimonials(2);
@@ -32,9 +34,9 @@ const TestimonialSection = ({ testimonials }) => {
         const isLastComment = index === visibleTestimonials - 1;
 
         if (testimonial.data.isShortMessage) {
-          return <SocialMediaTestimonial key={index} testimonial={testimonial.data} lastComment={isLastComment} />;
+          return <SocialMediaTestimonial key={index} testimonial={testimonial.data} lastComment={isLastComment && isIndexSection} />;
         } else {
-          return <EmailTestimonial key={index} testimonial={testimonial.data} opacity />;
+          return <EmailTestimonial key={index} testimonial={testimonial.data} lastComment={isIndexSection} />;
         }
       })}
 
