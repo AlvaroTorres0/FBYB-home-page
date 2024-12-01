@@ -20,7 +20,8 @@ export const LocationsProps = {
   pagination: true,
   spaceBetween: 25,
   slidesPerView: 1.9,
-
+  mousewheel: true,
+  navigation: true,
   breakpoints: {
     480: {
       slidesPerView: 2,
@@ -30,7 +31,15 @@ export const LocationsProps = {
       slidesPerView: 3,
       spaceBetween: 20,
     },
+    768: {
+      slidesPerView: 3.5,
+      spaceBetween: 20,
+    },
     1024: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1248: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
@@ -91,7 +100,7 @@ const LocationCard: React.FC<Location> = ({ id, name, image }) => {
     <article className="flex flex-col gap-2 max-w-[340px] sm:max-w-[400px] mb-10" key={id}>
       <img src={image} alt={`Image ${name}`} className="w-full h-full rounded-md" />
       <div className="w-full border-2 border-[#C2A86A] rounded-sm py-3 text-center">
-        <h5>{name}</h5>
+        <h5 className="text-xs lg:text-sm xl:text-base">{name}</h5>
       </div>
     </article>
   );
