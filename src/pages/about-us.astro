@@ -2,7 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import NavbarMobile from '../components/header/NavbarMobile.astro';
 import NavbarDesktop from '../components/header/NavbarDesktop.astro';
-import TestimonialsSection from '../sections/Testimonials/TestimonialsSection.astro';
+import Home from '../sections/AboutPage/Home.astro';
+import Mission from '../sections/AboutPage/Mission.astro';
+import CoreValues from '../sections/AboutPage/CoreValues.astro';
 ---
 
 <Layout title="">
@@ -12,5 +14,9 @@ import TestimonialsSection from '../sections/Testimonials/TestimonialsSection.as
   <!-- ? Header section desktop-->
   <NavbarDesktop isLanding={true} />
 
-  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12 mt-[120px] lg:mt-[60px]"></main>
+  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+    <Home />
+    <Mission />
+    <CoreValues />
+  </main>
 </Layout>
