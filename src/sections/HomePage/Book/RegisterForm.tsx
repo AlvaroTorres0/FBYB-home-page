@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormComponent, ContactButtons } from '../../components/common/FormComponents';
+import { FormComponent, ContactButtons } from '../../../components/common/FormComponents';
 
 export const RegisterForm: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { z } from 'zod';
-import { TestimonialCardSchema } from '../../../d';
+import { TestimonialCardSchema } from '../../../../d';
 import './StylesTestimonials.css';
 
 type TestimonialCard = z.infer<typeof TestimonialCardSchema>;
