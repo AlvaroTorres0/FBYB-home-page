@@ -38,7 +38,7 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="overflow flex flex-col items-center Satoshi-regular" transition:animate={fade({ duration: '0.5s' })}>
+  <body class="overflow flex flex-col items-center Satoshi-regular overflow-x-hidden" transition:animate={fade({ duration: '0.5s' })}>
     <Toaster position="top-right" client:only="react" />
     <slot />
     <!-- ! Footer -->
@@ -71,5 +71,9 @@ const { title } = Astro.props;
 <style is:global>
   section {
     scroll-margin-top: 100px;
+  }
+  html,
+  body {
+    overflow-x: hidden;
   }
 </style>

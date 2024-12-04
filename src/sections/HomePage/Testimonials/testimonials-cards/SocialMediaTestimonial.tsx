@@ -26,13 +26,13 @@ const ShortTestimonial: React.FC<Props> = ({ testimonial, lastComment = false })
         </div>
 
         <div className="flex flex-col mt-1 gap-2">
-          <p className="text-md text-[#7C8997] font-normal">From:</p>
-          <span className="text-lg font-semibold text-blueBg xl:text-2xl">{testimonial.name}</span>
+          <p className="text-[13px]/[17.68px] text-[#7C8997] font-normal">From:</p>
+          <span className="text-[22px]/[26.4px] font-semibold text-blueBg">{testimonial.name}</span>
         </div>
       </div>
       <div className="rounded-2xl p-6 leading-relaxed border border-[#03264D33] pr-20 relative">
         <div className={`relative max-w-md p-4 bg-[#E9ECF1] rounded-2xl ${lastComment ? 'fade-mask-media' : ''}`}>
-          <p className="text-[#606773] font-medium xl:font-normal">"{testimonial.message}"</p>
+          <p className="text-[#606773] text-[16px]/[21.76px] font-medium xl:font-normal">"{testimonial.message}"</p>
           <div className="absolute -bottom-3 left-0 w-6 h-6 bg-[#E9ECF1] rotate-[35deg]" style={{ clipPath: 'polygon(0 0, 100% 0, 0 100%)' }}></div>
         </div>
       </div>

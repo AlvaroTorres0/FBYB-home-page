@@ -1,3 +1,22 @@
+.swiper .swiper-wrapper {
+  width: 0 !important;
+}
+
+.custom-prev img,
+.custom-next img {
+  filter: none;
+  opacity: 1;
+  cursor: pointer;
+}
+.swiper-button-disabled {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.swiper-pagination {
+  display: none;
+}
+
 .swiper-slide-active {
   transform: scale(1.1);
   transition: transform 0.5s;

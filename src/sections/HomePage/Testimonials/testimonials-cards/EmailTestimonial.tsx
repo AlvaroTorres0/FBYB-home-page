@@ -20,8 +20,8 @@ const EmailTestimonial: React.FC<Props> = ({ testimonial, lastComment = false })
           </div>
 
           <div className="flex flex-col mt-1 gap-2">
-            <p className="text-md text-[#7C8997] font-normal">From:</p>
-            <span className="text-lg font-semibold text-blueBg xl:text-2xl">{testimonial.name}</span>
+            <p className="text-[13px]/[17.68px] text-[#7C8997] font-normal">From:</p>
+            <span className="text-[22px]/[26.4px] lg:text-[24px]/[29.28px] font-semibold text-blueBg">{testimonial.name}</span>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@ const EmailTestimonial: React.FC<Props> = ({ testimonial, lastComment = false })
               <h5 className="font-semibold text-lg text-[#606773]">{testimonial.subject}</h5>
             </div>
           )}
-          <p className={`text-[#606773] text-base ${lastComment ? 'fade-mask-email' : ''}`}>
+          <p className={`text-[#606773] text-[14px]/[19.04px] ${lastComment ? 'fade-mask-email' : ''}`}>
             {testimonial.message.split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}

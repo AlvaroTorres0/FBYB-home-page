@@ -12,31 +12,31 @@ const { property } = Astro.props;
 ---
 
 <article
-  class={`w-full max-w-[450px] h-max lg:min-w-full p-5 xl:p-8 rounded-md shadow-[0px_20px_30px_-5px_#00000033] flex ${property.rowCard ? 'flex-col lg:flex-row gap-3 xl:gap-6' : 'flex-col gap-3'}`}
+  class={`w-full max-w-[450px] h-max lg:min-w-full p-10 xl:p-8 rounded-md shadow-[0px_20px_30px_-5px_#00000033] flex ${property.rowCard ? 'flex-col lg:flex-row gap-3 xl:gap-6' : 'flex-col gap-3'}`}
 >
   <img src={property.imageUrlMobile} alt={property.imageAltText} class={`rounded-md lg:hidden object-cover ${property.rowCard ? 'h-full w-full lg:w-6/12' : 'w-full h-2/4'}`} />
 
   <img src={property.imageUrlDesktop} alt={property.imageAltText} class={`rounded-md hidden lg:block object-cover ${property.rowCard ? 'h-full w-full lg:w-6/12' : 'w-full h-2/4'}`} />
 
   <div class={`flex flex-col gap-3 ${property.rowCard ? 'h-full w-full lg:w-6/12' : 'w-full h-2/4'}`}>
-    <div class="flex gap-2 text-[#7C8997] text-xs">
+    <div class="flex gap-2 text-[#7C8997] text-[13px]/[17.68px] font-extralight">
       <span>{property.date}</span>
       <span>•</span>
       <span>{property.readTime}</span>
     </div>
 
-    <h5 class="mt-6 text-blueBg font-semibold text-2xl leading-snug">
+    <h5 class="mt-6 text-blueBg font-medium text-[22px]/[26.4px] lg:text-[24px]/[29.28px]">
       {property.title}
     </h5>
 
-    <p class="text-[#606773] text-base xl:text-lg leading-snug">
+    <p class="text-[#606773] text-[17px]/[25.16px] lg:text-[16px]/[21.76px] font-light">
       {property.description}
     </p>
 
     <button
       class={`rounded-md py-2 max-w-max w-full px-4 flex items-center gap-2 mt-3 hover:scale-105 transition-all duration-200 ${property.buttonBlue ? 'bg-[#002348] text-yellow' : 'border-[1px] border-[#0023484D] bg-transparent text-blueBg'}`}
     >
-      <span class="text-base xl:text-lg font-medium">
+      <span class="text-[14px]/[14.28px] xl:text-lg font-normal">
         {property.buttonText}
       </span>
       {

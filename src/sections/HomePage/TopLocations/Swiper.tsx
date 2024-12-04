@@ -1,26 +1,22 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Navigation, Autoplay, Mousewheel, Pagination } from 'swiper/modules';
+import { Navigation, Autoplay, Mousewheel } from 'swiper/modules';
 import './SwiperStyles.css';
 import 'swiper/css';
 import 'swiper/swiper-bundle.css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/mousewheel';
 import 'swiper/css/autoplay';
 
 export const LocationsProps = {
-  loop: true,
-  modules: [Autoplay, Mousewheel, Pagination, Navigation],
+  modules: [Autoplay, Navigation],
   autoplay: {
     delay: 2000,
     disableOnInteraction: true,
   },
-  pagination: true,
   spaceBetween: 25,
   slidesPerView: 1.9,
-  mousewheel: true,
   navigation: true,
   breakpoints: {
     480: {
@@ -36,12 +32,12 @@ export const LocationsProps = {
       spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+      slidesPerView: 5,
+      spaceBetween: 6,
     },
     1248: {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: 7,
+      spaceBetween: 20,
     },
   },
 };
@@ -97,10 +93,10 @@ interface Location {
 
 const LocationCard: React.FC<Location> = ({ id, name, image }) => {
   return (
-    <article className="flex flex-col gap-2 max-w-[340px] sm:max-w-[400px] mb-10" key={id}>
-      <img src={image} alt={`Image ${name}`} className="w-full h-full rounded-md" />
+    <article className="flex flex-col gap-2 max-w-[380px] w-full sm:max-w-[280px] lg:max-w-[170px] mb-10" key={id}>
+      <img src={image} alt={`Image ${name}`} className="w-full h-full rounded-md max-h-[330px] object-contain" />
       <div className="w-full border-2 border-[#C2A86A] rounded-sm py-3 text-center">
-        <h5 className="text-xs lg:text-sm xl:text-base">{name}</h5>
+        <h5 className="text-xs lg:text-[14px]/[19.04px] font-light">{name}</h5>
       </div>
     </article>
   );
@@ -108,8 +104,25 @@ const LocationCard: React.FC<Location> = ({ id, name, image }) => {
 
 export const TopLocationsCarousel: React.FC = () => {
   return (
-    <div className="max-w-[320px] sm:min-w-full">
-      <Swiper {...LocationsProps}>
+    <div className="custom-swiper-container w-full mx-auto">
+      <div className=" w-full flex flex-row gap-3 justify-end pb-16 pr-8">
+        <button className="custom-prev">
+          <img src="/public/assets/locations/prev-btn.png" alt="Previous" className="w-[56px] h-[56px]" />
+        </button>
+        <button className="custom-next">
+          <img src="/public/assets/locations/next-btn.png" alt="Next" className="w-[56px] h-[56px]" />
+        </button>
+      </div>
+
+      <Swiper
+        {...LocationsProps}
+        navigation={{
+          nextEl: '.custom-next',
+          prevEl: '.custom-prev',
+        }}
+        centeredSlides={true}
+        className="overflow-x-hidden w-full"
+      >
         {locations.map(location => (
           <SwiperSlide key={location.id}>
             <LocationCard {...location} />
