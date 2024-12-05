@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NavbarMobile from '../components/header/NavbarMobile.astro';
-import NavbarDesktop from '../components/header/NavbarDesktop.astro';
 import Home from '../sections/AboutPage/Home.astro';
 import Mission from '../sections/AboutPage/Mission.astro';
 import CoreValues from '../sections/AboutPage/CoreValues.astro';
 import Experts from '../sections/AboutPage/Experts/Experts.astro';
+import SecondaryNavbar from '../components/header/SecondaryNavbar.astro';
 ---
 
 <Layout title="">
@@ -13,7 +13,7 @@ import Experts from '../sections/AboutPage/Experts/Experts.astro';
   <NavbarMobile isLanding={true} />
 
   <!-- ? Header section desktop-->
-  <NavbarDesktop isLanding={true} />
+  <SecondaryNavbar isLanding={true} />
 
   <main class="flex flex-col gap-[128px]">
     <Home />
