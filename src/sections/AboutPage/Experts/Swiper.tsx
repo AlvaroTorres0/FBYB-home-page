@@ -56,7 +56,7 @@ const ExpertCard: React.FC<expert> = ({ id, name, title, image, description }) =
       <img src={image} alt={`Image ${name}`} className="w-full h-max rounded-[4px] object-contain" />
       <h5 className="text-[22px]/[26.4px] text-blueBg font-normal">{name}</h5>
 
-      <h6 className="text-[#7C8997] font-medium text-[13px]/[17.68px] border-[1px] border-[#7C8997] py-1 px-2">{title}</h6>
+      <h6 className="text-[#7C8997] font-medium text-[13px]/[17.68px] border-[1px] border-[#7C8997] py-1 px-2 w-max">{title}</h6>
 
       <p className="text-[#606773] font-light text-[14px]/[19.04px]">{description}</p>
     </article>
