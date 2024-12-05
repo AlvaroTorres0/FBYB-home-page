@@ -20,7 +20,7 @@ const experts = [
     id: 'Jane Smith',
     name: 'Jane Smith',
     title: 'Senior Investment Advisor',
-    image: 'https://shualim.online/wlp/fbyb/home/public/assets/Experts/1.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/Experts/1.webp?v=424234',
     description:
       'With over 10 years of experience in Dubai real estate, Jane specializes in investment planning and property acquisition, helping clients navigate the market with ease and confidence.',
   },
@@ -28,17 +28,17 @@ const experts = [
     id: 'Anish Singh',
     name: 'Anish Singh',
     title: 'Senior Investment Advisor',
-    image: 'https://shualim.online/wlp/fbyb/home/public/assets/Experts/2.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/Experts/2.webp?v=424234',
     description:
-      'With over 10 years of experience in Dubai real estate, Jane specializes in investment planning and property acquisition, helping clients navigate the market with ease and confidence.',
+      'With over 10 years of experience in Dubai real estate, Anish is an expert in identifying high-yield investment opportunities and crafting tailored property strategies, ensuring clients achieve their financial goals seamlessly.',
   },
   {
     id: 'Ahmed Abdullah',
     name: 'Ahmed Abdullah',
     title: 'Senior Investment Advisor',
-    image: 'https://shualim.online/wlp/fbyb/home/public/assets/Experts/3.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/Experts/3.webp?v=424234',
     description:
-      'With over 10 years of experience in Dubai real estate, Jane specializes in investment planning and property acquisition, helping clients navigate the market with ease and confidence.',
+      'Specializing in luxury real estate and strategic investments, Ahmed brings over a decade of experience in Dubai’s dynamic market, guiding clients through every step with precision and expertise.',
   },
 ];
 
@@ -66,7 +66,7 @@ const ExpertCard: React.FC<expert> = ({ id, name, title, image, description }) =
 export const ExpertsCarousel: React.FC = () => {
   return (
     <div className="custom-swiper-container w-full">
-      <div className="w-full flex flex-row gap-3 justify-end pb-6 pr-8 lg:absolute lg:bottom-0 lg:w-max lg:z-40 mb-6 lg:left-96">
+      <div className="w-full flex flex-row gap-3 justify-end sm:justify-center pb-6 pr-8 lg:absolute lg:bottom-[105px] lg:w-max lg:z-40 mb-6 lg:left-96">
         <button className="custom-prev">
           <img src="https://shualim.online/wlp/fbyb/home/public/assets/locations/prev-btn.webp" alt="Previous" className="w-[72px] h-[72px]" />
         </button>

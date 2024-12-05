@@ -4,10 +4,10 @@ import { GenericFormComponent, ContactButtons } from '../../../components/common
 
 const HomeFormSection: React.FC = () => {
   return (
-    <article className="border-[1px] border-[#E8D6ADB2] p-3 rounded-[4px]">
-      <div className="bg-blueBg flex flex-col lg:max-w-[500px] w-full rounded-md gap-5 p-6 ">
+    <article className="border-[1px] border-[#E8D6AD33] p-3 rounded-[4px]">
+      <div className="bg-blueBg flex flex-col lg:max-w-[500px] w-full rounded-md gap-5 p-6 max-w-[500px]">
         <p className="text-[#F8FBFF]  font-semibold md:text-lg lg:text-xl xl:text-2xl lg:font-medium 2xl:pr-16">
-          Unlock Dubai’s Top Investments – <br /> Enter Your Details to Get Started"
+          Unlock Dubai’s Top Investments – <br /> Enter Your Details to Get Started
         </p>
 
         <GenericFormComponent />
