@@ -1,0 +1,61 @@
+---
+import HeroStructure from '../../../structures/HeroStructure.astro';
+import AboutFormSection from './Form';
+---
+
+<!-- ? Home section -->
+<HeroStructure id="about-home-section">
+  <div class="p-3 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-md h-max w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-0 home-section bg-blueBg">
+    <article class="w-full flex flex-col items-center gap-5 lg:w-6/12 px-4 h-max lg:px-0">
+      <div class="flex justify-center gap-4">
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMiAxNy4yN0wxOC4xOCAyMWwtMS42NC03LjAzTDIyIDkuMjRsLTcuMTktLjYyTDEyIDJMOS4xOSA4LjYyTDIgOS4yNGw1LjQ1IDQuNzNMNS44MiAyMXoiLz48L3N2Zz4="
+          alt="Star icon"
+          class="w-6 h-6 object-contain"
+        />
+
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMiAxNy4yN0wxOC4xOCAyMWwtMS42NC03LjAzTDIyIDkuMjRsLTcuMTktLjYyTDEyIDJMOS4xOSA4LjYyTDIgOS4yNGw1LjQ1IDQuNzNMNS44MiAyMXoiLz48L3N2Zz4="
+          alt="Star icon"
+          class="w-6 h-6 object-contain"
+        />
+
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xMiAxNy4yN0wxOC4xOCAyMWwtMS42NC03LjAzTDIyIDkuMjRsLTcuMTktLjYyTDEyIDJMOS4xOSA4LjYyTDIgOS4yNGw1LjQ1IDQuNzNMNS44MiAyMXoiLz48L3N2Zz4="
+          alt="Star icon"
+          class="w-6 h-6 object-contain"
+        />
+      </div>
+
+      <h1 class="Giyaste text-center text-[28px]/[33.6px] leading-snug tracking-widest text-[#FFFFFF] lg:text-[32px]/[35.2px] xl:px-8 xl:leading-tight xl:font-light xl:tracking-[0.5rem] px-6">
+        LET'S BEGING YOUR INVESTMENT JOURNEY
+      </h1>
+
+      <p class="text-[#A7B3C7] font-light text-center mt-1 text-[16px]/[21.76px] px-5 xl:px-6 lg:w-10/12 2xl:w-8/12">
+        Ready to explore opportunities in Dubai real estate? Our advisors are here to provide expert guidance and answer any questions you may have. Sign up for a consultation to take the first step.
+      </p>
+    </article>
+
+    <article class="w-full flex flex-col items-center justify-center gap-5 lg:w-6/12 px-4 h-max">
+      <AboutFormSection client:only="react" />
+    </article>
+  </div>
+</HeroStructure>
+
+<style>
+  .home-section {
+    min-height: max-content;
+  }
+  @media (min-width: 1524px) {
+    .home-section {
+      height: calc(100vh - 120px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .home-section {
+      height: calc(100vh - 120px);
+      min-height: 700px;
+    }
+  }
+</style>

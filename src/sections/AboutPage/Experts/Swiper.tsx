@@ -66,12 +66,12 @@ const ExpertCard: React.FC<expert> = ({ id, name, title, image, description }) =
 export const ExpertsCarousel: React.FC = () => {
   return (
     <div className="custom-swiper-container w-full relative">
-      <div className="w-full flex flex-row gap-3 justify-end pb-6 pr-8 lg:absolute lg:bottom-0 lg:left-0 lg:w-max lg:z-40 mb-12 lg:mb-0">
+      <div className="w-full flex flex-row gap-3 justify-end pb-6 pr-8 lg:absolute lg:bottom-0 lg:left-0 lg:w-max lg:z-40 mb-12 lg:mb-10">
         <button className="custom-prev">
-          <img src="/public/assets/locations/prev-btn.png" alt="Previous" className="w-[56px] h-[56px]" />
+          <img src="/public/assets/locations/prev-btn.png" alt="Previous" className="w-[72px] h-[72px]" />
         </button>
         <button className="custom-next">
-          <img src="/public/assets/locations/next-btn.png" alt="Next" className="w-[56px] h-[56px]" />
+          <img src="/public/assets/locations/next-btn.png" alt="Next" className="w-[72px] h-[72px]" />
         </button>
       </div>
 
