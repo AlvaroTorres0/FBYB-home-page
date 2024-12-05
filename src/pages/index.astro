@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import NavbarMobile from '../components/header/NavbarMobile.astro';
+import NavbarMobile from '../components/header/NavbarMobile';
 import NavbarDesktop from '../components/header/NavbarDesktop.astro';
 import Home from '../sections/HomePage/Home.astro';
 import QualityService from '../sections/HomePage/QualityService.astro';
@@ -14,7 +14,7 @@ import BookConsultationButton from '../components/common/BookConsultation';
 
 <Layout title="">
   <!-- ? navbar mobile -->
-  <NavbarMobile isLanding={true} />
+  <NavbarMobile isLanding={true} client:load />
 
   <!-- ? Header section desktop-->
   <NavbarDesktop isLanding={true} />

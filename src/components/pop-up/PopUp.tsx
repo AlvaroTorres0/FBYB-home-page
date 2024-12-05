@@ -1,6 +1,5 @@
 import usePopUpModal from '../../stores/popUpStore';
 import { FormComponentMessage } from '../common/FormComponents';
-import { ContactButtons } from '../common/FormComponents';
 
 const PopUpModal = () => {
   const { isOpenPopUpModal, closePopUpModal } = usePopUpModal();
