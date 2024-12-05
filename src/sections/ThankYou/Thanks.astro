@@ -1,5 +1,6 @@
 ---
 import SectionStructure from '../../structures/SectionStructure.astro';
+import ThankYouText from './ThankYouText';
 ---
 
 <SectionStructure wrapperClasses="items-center lg:flex-row" sectionClasses="justify-center" idSection="thank-you">
@@ -34,10 +35,7 @@ import SectionStructure from '../../structures/SectionStructure.astro';
 
       <div class="flex flex-col gap-4 items-center text-center px-6">
         <h2 class="Giyaste text-[28px]/[36px] md:text-4xl tracking-widest lg:text-[50px]/[55px]">THANK YOU!</h2>
-        <p class="text-[17px]/[26px] lg:text-[16px]/[23px] lg:px-28 px-6 text-[#001730]">
-          Dear <span class="font-bold">[Name] [Surname]</span>, <br />We’ve received your request and will contact you soon to confirm the details. Get ready for a seamless journey to explore Dubai’s
-          finest properties!
-        </p>
+        <ThankYouText client:only="react" />
         <p class="text-[#606773] w-full px-2 text-[17px]/[26px]">
           If you have any immediate questions, feel <br class="hidden lg:block" /> free to contact us via email or <br class="lg:hidden" /> WhatsApp.
         </p>

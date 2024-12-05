@@ -114,6 +114,9 @@ export const FormComponent = () => {
 
       if (response.ok) {
         toast.success('Form data sent successfully');
+        setTimeout(() => {
+          window.location.href = `/thank-you.html?firstName=${encodeURIComponent(data.firstName)}&lastName=${encodeURIComponent(data.lastName)}`;
+        }, 1000);
       } else {
         throw new Error('Error sending the form data');
       }
