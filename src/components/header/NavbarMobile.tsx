@@ -17,12 +17,18 @@ const Header = ({ isLanding }) => {
     setMenuOpen(!menuOpen);
   };
 
+  const { openPopUpModal } = usePopUpModal();
+
+  const handleOpenPopUpModal = () => {
+    openPopUpModal();
+  };
+
   return (
     <header className="flex flex-col items-center justify-center md:hidden fixed w-full max-w-full z-50 shadow-[0px_10px_50px_-30px_#00000024]">
       <nav className="flex w-full sm:px-10 z-40 relative justify-between h-[100px] px-8 bg-[#FFFFFF]">
         <div className="text-lg flex gap-4 items-center">
           <a className="flex items-center gap-2" href={isLanding ? '#home-section' : 'index.html'}>
-            <img className="object-contain w-[110px]" src="/public/assets/navbar/logo.webp" alt="FBYB Logo" title="Fly Before You Build" />
+            <img className="object-contain w-[110px]" src="https://shualim.online/wlp/fbyb/home/public/assets/navbar/logo.webp" alt="FBYB Logo" title="Fly Before You Build" />
           </a>
         </div>
 
@@ -34,7 +40,7 @@ const Header = ({ isLanding }) => {
               id="menu-icon"
               alt="Menu icon"
             />
-            <img src="/public/assets/navbar/menu-icon.webp" className={`hidden object-contain w-5 ${menuOpen ? '' : 'hidden'}`} id="close-icon" alt="Close icon" />
+            <img src="https://shualim.online/wlp/fbyb/home/public/assets/navbar/menu-icon.webp" className={`hidden object-contain w-5 ${menuOpen ? '' : 'hidden'}`} id="close-icon" alt="Close icon" />
           </div>
         </div>
       </nav>
@@ -55,7 +61,6 @@ const Header = ({ isLanding }) => {
             { label: 'Home', href: '/index.html' },
             { label: 'Testimonials', href: '/testimonials.html' },
             { label: 'About Us', href: '/about-us.html' },
-            { label: 'Contact', href: '/contact.html' },
           ].map((item, index) => (
             <li key={index} className="w-full">
               <a href={item.href} className="text-lg flex items-center justify-between" onClick={toggleMenu}>
@@ -68,6 +73,16 @@ const Header = ({ isLanding }) => {
               </a>
             </li>
           ))}
+          <li className="w-full">
+            <button className="text-lg flex items-center justify-between w-full" onClick={handleOpenPopUpModal}>
+              <span>Contact</span>
+              <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik04LjAyNSAyMkw2LjI1IDIwLjIyNUwxNC40NzUgMTJMNi4yNSAzLjc3NUw4LjAyNSAybDEwIDEweiIvPjwvc3ZnPg=="
+                alt="Arrow icon"
+                className="w-5 h-5 object-contain"
+              />
+            </button>
+          </li>
         </ul>
       </div>
     </header>

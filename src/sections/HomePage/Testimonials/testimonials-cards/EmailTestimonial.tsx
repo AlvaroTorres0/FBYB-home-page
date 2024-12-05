@@ -16,7 +16,7 @@ const EmailTestimonial: React.FC<Props> = ({ testimonial, lastComment = false })
       <div className="flex gap-4 p-6 w-full lg:w-4/12">
         <div className="flex gap-4 h-max items-end">
           <div className="w-6 h-6 flex items-center justify-center">
-            <img src="/public/assets/testimonials/email.svg" alt="Email icon" />
+            <img src="https://shualim.online/wlp/fbyb/home/public/assets/testimonials/email.svg" alt="Email icon" />
           </div>
 
           <div className="flex flex-col mt-1 gap-2">

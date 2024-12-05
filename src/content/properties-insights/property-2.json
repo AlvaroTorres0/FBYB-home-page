@@ -5,7 +5,7 @@
   "description": "Explore how Dubai’s real estate compares to cities like New York and London in terms of growth and stability.",
   "buttonText": "Read More",
   "rowCard": true,
-  "imageUrlMobile": "/public/assets/properties/third-m.webp",
-  "imageUrlDesktop": "/public/assets/properties/third.webp",
+  "imageUrlMobile": "https://shualim.online/wlp/fbyb/home/public/assets/properties/third-m.webp",
+  "imageUrlDesktop": "https://shualim.online/wlp/fbyb/home/public/assets/properties/third.webp",
   "imageAltText": "Split image showing Dubai, New York, and London skylines"
 }

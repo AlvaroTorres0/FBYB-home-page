@@ -47,42 +47,42 @@ const locations = [
   {
     id: 1,
     name: 'DOWNTOWN DUBAI',
-    image: '/public/assets/locations/1.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/1.webp',
   },
   {
     id: 2,
     name: 'DUBAI MARINA',
-    image: '/public/assets/locations/2.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/2.webp',
   },
   {
     id: 3,
     name: 'BUSINESS BAY',
-    image: '/public/assets/locations/3.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/3.webp',
   },
   {
     id: 4,
     name: 'MEYDAN',
-    image: '/public/assets/locations/4.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/4.webp',
   },
   {
     id: 5,
     name: 'ARABIAN RANCHES',
-    image: '/public/assets/locations/5.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/5.webp',
   },
   {
     id: 6,
     name: 'PALM JUMEIRAH',
-    image: '/public/assets/locations/6.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/6.webp',
   },
   {
     id: 7,
     name: 'JUMEIRAH VILLAGE CIRCLE (JVC)',
-    image: '/public/assets/locations/7.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/7.webp',
   },
   {
     id: 8,
     name: 'BLUEWATERS ISLAND',
-    image: '/public/assets/locations/8.webp',
+    image: 'https://shualim.online/wlp/fbyb/home/public/assets/locations/8.webp',
   },
 ];
 
@@ -108,10 +108,10 @@ export const TopLocationsCarousel: React.FC = () => {
     <div className="custom-swiper-container w-full mx-auto">
       <div className=" w-full flex flex-row gap-3 justify-end pb-16 pr-8">
         <button className="custom-prev">
-          <img src="/public/assets/locations/prev-btn.webp" alt="Previous" className="w-[56px] h-[56px]" />
+          <img src="https://shualim.online/wlp/fbyb/home/public/assets/locations/prev-btn.webp" alt="Previous" className="w-[56px] h-[56px]" />
         </button>
         <button className="custom-next">
-          <img src="/public/assets/locations/next-btn.webp" alt="Next" className="w-[56px] h-[56px]" />
+          <img src="https://shualim.online/wlp/fbyb/home/public/assets/locations/next-btn.webp" alt="Next" className="w-[56px] h-[56px]" />
         </button>
       </div>
 

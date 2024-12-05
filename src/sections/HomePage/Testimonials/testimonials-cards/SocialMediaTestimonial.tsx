@@ -22,7 +22,7 @@ const ShortTestimonial: React.FC<Props> = ({ testimonial, lastComment = false })
             />
           )}
 
-          {testimonial.socialMedia === 'chat' && <img src="/public/assets/testimonials/chat.svg" alt="Chat icon" />}
+          {testimonial.socialMedia === 'chat' && <img src="https://shualim.online/wlp/fbyb/home/public/assets/testimonials/chat.svg" alt="Chat icon" />}
         </div>
 
         <div className="flex flex-col mt-1 gap-2">
