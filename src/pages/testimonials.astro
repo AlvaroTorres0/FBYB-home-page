@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import NavbarMobile from '../components/header/NavbarMobile.astro';
-import NavbarDesktop from '../components/header/NavbarDesktop.astro';
 import TestimonialsSection from '../sections/HomePage/Testimonials/TestimonialsSection.astro';
 import TakeFirstStep from '../sections/TestimonialsPage/TakeFirstStep.astro';
+import SecondaryNavbar from '../components/header/SecondaryNavbar.astro';
 ---
 
 <Layout title="">
@@ -11,7 +11,7 @@ import TakeFirstStep from '../sections/TestimonialsPage/TakeFirstStep.astro';
   <NavbarMobile isLanding={true} />
 
   <!-- ? Header section desktop-->
-  <NavbarDesktop isLanding={true} />
+  <SecondaryNavbar isLanding={true} />
 
   <main class="flex flex-col gap-8 md:gap-10 lg:gap-12 mt-[120px] lg:mt-[60px]">
     <TestimonialsSection isIndexSection={false} />
