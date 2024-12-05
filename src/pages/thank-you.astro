@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavbarMobile from '../components/header/NavbarMobile.astro';
+import Thanks from '../sections/ThankYou/Thanks.astro';
+---
+
+<Layout title="">
+  <!-- ? navbar mobile -->
+  <NavbarMobile isLanding={false} />
+
+  <!-- ? Header section desktop-->
+  <!-- <NavbarDesktop isLanding={false} /> -->
+
+  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12 mt-[120px] lg:mt-[60px]">
+    <Thanks />
+  </main>
+</Layout>
