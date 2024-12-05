@@ -22,7 +22,7 @@ const Header = ({ isLanding }) => {
       <nav className="flex w-full sm:px-10 z-40 relative justify-between h-[100px] px-8 bg-[#FFFFFF]">
         <div className="text-lg flex gap-4 items-center">
           <a className="flex items-center gap-2" href={isLanding ? '#home-section' : 'index.html'}>
-            <img className="object-contain w-[110px]" src="/public/assets/navbar/logo.png" alt="FBYB Logo" title="Fly Before You Build" />
+            <img className="object-contain w-[110px]" src="/public/assets/navbar/logo.webp" alt="FBYB Logo" title="Fly Before You Build" />
           </a>
         </div>
 
@@ -34,7 +34,7 @@ const Header = ({ isLanding }) => {
               id="menu-icon"
               alt="Menu icon"
             />
-            <img src="/public/assets/navbar/menu-icon.png" className={`hidden object-contain w-5 ${menuOpen ? '' : 'hidden'}`} id="close-icon" alt="Close icon" />
+            <img src="/public/assets/navbar/menu-icon.webp" className={`hidden object-contain w-5 ${menuOpen ? '' : 'hidden'}`} id="close-icon" alt="Close icon" />
           </div>
         </div>
       </nav>

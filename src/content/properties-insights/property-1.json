@@ -5,7 +5,7 @@
   "description": "An in-depth review of expected rental yields across key areas in Dubai, helping investors make informed decisions.",
   "buttonText": "Read More",
   "rowCard": true,
-  "imageUrlMobile": "/public/assets/properties/second-m.png",
-  "imageUrlDesktop": "/public/assets/properties/second.png",
+  "imageUrlMobile": "/public/assets/properties/second-m.webp",
+  "imageUrlDesktop": "/public/assets/properties/second.webp",
   "imageAltText": "Dubai skyline with 2025 and rental yields text overlay"
 }
