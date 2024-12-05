@@ -11,10 +11,10 @@ import SecondaryNavbar from '../components/header/SecondaryNavbar.astro';
 
 <Layout title="">
   <!-- ? navbar mobile -->
-  <NavbarMobile isLanding={true} client:load />
+  <NavbarMobile isLanding={false} client:load />
 
   <!-- ? Header section desktop-->
-  <SecondaryNavbar isLanding={true} />
+  <SecondaryNavbar isLanding={false} />
 
   <main class="flex flex-col gap-[128px]">
     <Home />
