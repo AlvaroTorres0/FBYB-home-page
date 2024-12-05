@@ -9,6 +9,7 @@ import TopLocations from '../sections/HomePage/TopLocations/TopLocations.astro';
 import OffPlan from '../sections/HomePage/OffPlan.astro';
 import PropertyInsight from '../sections/HomePage/PropertyInsight/PropertyInsight.astro';
 import TestimonialsSection from '../sections/HomePage/Testimonials/TestimonialsSection.astro';
+import BookConsultationButton from '../components/common/BookConsultation';
 ---
 
 <Layout title="">
@@ -18,7 +19,9 @@ import TestimonialsSection from '../sections/HomePage/Testimonials/TestimonialsS
   <!-- ? Header section desktop-->
   <NavbarDesktop isLanding={true} />
 
-  <main class="flex flex-col gap-[128px]">
+  <main class="flex flex-col gap-[128px] h-max relative">
+    <BookConsultationButton client:load />
+
     <Home />
     <QualityService />
     <TourService />

@@ -3,6 +3,7 @@ import { fade } from 'astro:transitions';
 import { Toaster, toast } from 'sonner';
 
 import Footer from '../components/Footer.astro';
+import PopUpModal from '../components/pop-up/PopUp.tsx';
 
 interface Props {
   title: string;
@@ -39,11 +40,13 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet" />
   </head>
-  <body class="overflow flex flex-col items-center Satoshi-regular overflow-x-hidden" transition:animate={fade({ duration: '0.5s' })}>
+  <body class="overflow flex flex-col items-center Satoshi-regular overflow-x-hidden over" transition:animate={fade({ duration: '0.5s' })}>
     <Toaster position="top-right" client:only="react" />
     <slot />
     <!-- ! Footer -->
     <Footer />
+
+    <PopUpModal client:only="react" />
 
     <script>
       document.addEventListener('DOMContentLoaded', function () {
