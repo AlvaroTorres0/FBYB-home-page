@@ -1,10 +1,10 @@
 ---
-import HeroStructure from '../../../structures/HeroStructure.astro';
+import SectionStructure from '../../../structures/SectionStructure.astro';
 import AboutFormSection from './Form';
 ---
 
 <!-- ? Home section -->
-<HeroStructure id="about-home-section">
+<SectionStructure idSection="home-about">
   <div class="p-3 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] rounded-md h-max w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-0 home-section bg-blueBg">
     <article class="w-full flex flex-col items-center gap-5 lg:w-6/12 px-4 h-max lg:px-0">
       <div class="flex justify-center gap-4">
@@ -40,7 +40,7 @@ import AboutFormSection from './Form';
       <AboutFormSection client:only="react" />
     </article>
   </div>
-</HeroStructure>
+</SectionStructure>
 
 <style>
   .home-section {

@@ -35,7 +35,7 @@ const TestimonialSection = ({ testimonials, isIndexSection }) => {
   }, []);
 
   return (
-    <article className="mt-12 flex flex-wrap justify-center items-center gap-10 relative">
+    <article className="mt-12 flex flex-wrap justify-center items-center gap-10 relative h-max">
       {testimonials.slice(0, visibleTestimonials).map((testimonial, index) => {
         const isLastComment = index === visibleTestimonials - 1;
 
@@ -53,10 +53,7 @@ const TestimonialSection = ({ testimonials, isIndexSection }) => {
       )}
 
       {isIndexSection && (
-        <a
-          href="/testimonials.html"
-          className="gap-[0.5px] w-full max-w-[330px] self-center lg:p-0 lg:gap-0.5 mt-9 flex hover:scale-95 transition-all duration-200 absolute -bottom-12 lg:right-0 group"
-        >
+        <a href="/testimonials.html" className="gap-[0.5px] w-full max-w-[330px] self-center lg:p-0 lg:gap-0.5 flex hover:scale-95 transition-all duration-200 absolute -bottom-12 lg:right-0 group">
           <span className="flex font-medium xl:text-lg justify-center items-center bg-[#FFFFFF] rounded-md py-3 px-6 lg:py-4 text-blueBg border-[1px] border-[#03264D4D] w-full lg:w-max text-[16px]/[17.92px] group-hover:bg-[#E8D6AD] group-hover:text-[#03264D] transition-all duration-200">
             View Testimonials
           </span>

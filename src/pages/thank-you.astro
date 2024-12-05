@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import NavbarMobile from '../components/header/NavbarMobile.astro';
+import NavbarMobile from '../components/header/NavbarMobile';
 import Thanks from '../sections/ThankYou/Thanks.astro';
 ---
 
 <Layout title="">
   <!-- ? navbar mobile -->
-  <NavbarMobile isLanding={false} />
+  <NavbarMobile isLanding={false} client:load />
 
   <!-- ? Header section desktop-->
   <!-- <NavbarDesktop isLanding={false} /> -->

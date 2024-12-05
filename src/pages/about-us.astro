@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import NavbarMobile from '../components/header/NavbarMobile.astro';
+import NavbarMobile from '../components/header/NavbarMobile';
 import Home from '../sections/AboutPage/Home.astro';
 import Mission from '../sections/AboutPage/Mission.astro';
 import CoreValues from '../sections/AboutPage/CoreValues.astro';
@@ -11,7 +11,7 @@ import SecondaryNavbar from '../components/header/SecondaryNavbar.astro';
 
 <Layout title="">
   <!-- ? navbar mobile -->
-  <NavbarMobile isLanding={true} />
+  <NavbarMobile isLanding={true} client:load />
 
   <!-- ? Header section desktop-->
   <SecondaryNavbar isLanding={true} />

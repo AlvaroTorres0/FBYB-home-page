@@ -1,5 +1,6 @@
 ---
 import SectionStructure from '../../structures/SectionStructure.astro';
+import ThankYouCounter from './ThankYouCounter';
 import ThankYouText from './ThankYouText';
 ---
 
@@ -7,7 +8,7 @@ import ThankYouText from './ThankYouText';
   <article
     class="flex flex-col lg:flex-row lg:justify-between relative lg:items-center pb-4 shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] bg-[#F8FBFF] -mt-10 pt-10 lg:pt-0 items-center shado gap-8"
   >
-    <img src="/public/assets/navbar/Logo.png" class="absolute hidden lg:block object-contain top-8 left-8 w-[120px] xl:w-[175px] h-auto" alt="" />
+    <img src="/public/assets/navbar/Logo.png" class="absolute hidden lg:block object-contain top-12 left-8 w-[120px] xl:w-[175px] h-auto" alt="" />
     <div class="flex flex-col items-center gap-4 lg:w-[50%]">
       <div class="flex justify-center">
         <article class="w-full flex flex-col items-center gap-5 lg:w-6/12 px-4 h-max lg:px-0">
@@ -39,6 +40,8 @@ import ThankYouText from './ThankYouText';
         <p class="text-[#606773] w-full px-2 text-[17px]/[26px]">
           If you have any immediate questions, feel <br class="hidden lg:block" /> free to contact us via email or <br class="lg:hidden" /> WhatsApp.
         </p>
+
+        <ThankYouCounter client:only="react" />
       </div>
 
       <article class="flex lg:mt-10 w-[320px] lg:w-full flex-col">

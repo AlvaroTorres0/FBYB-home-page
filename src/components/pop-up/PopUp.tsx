@@ -1,5 +1,6 @@
 import usePopUpModal from '../../stores/popUpStore';
-import { FormComponentMessage } from '../common/FormComponents';
+import { GenericFormComponent } from '../common/FormComponents';
+import './FormStyles.css';
 
 const PopUpModal = () => {
   const { isOpenPopUpModal, closePopUpModal } = usePopUpModal();
@@ -23,7 +24,7 @@ const PopUpModal = () => {
           BOOK A FREE REAL ESTATE CONSULTATION CALL TODAY
         </p>
 
-        <FormComponentMessage />
+        <GenericFormComponent includeMessageField />
       </div>
     </div>
   );

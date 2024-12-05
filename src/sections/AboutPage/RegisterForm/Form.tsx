@@ -1,6 +1,6 @@
 import 'react-phone-input-2/lib/style.css';
 import './FormStyles.css';
-import { FormComponent, CountDown, ContactButtons } from '../../../components/common/FormComponents';
+import { GenericFormComponent, ContactButtons } from '../../../components/common/FormComponents';
 
 const HomeFormSection: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const HomeFormSection: React.FC = () => {
           Unlock Dubai’s Top Investments – <br /> Enter Your Details to Get Started"
         </p>
 
-        <FormComponent />
+        <GenericFormComponent />
 
         <ContactButtons />
       </div>

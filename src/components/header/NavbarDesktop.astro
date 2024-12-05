@@ -1,4 +1,5 @@
 ---
+import ContactButton from './ContactButton';
 interface Props {
   isLanding: boolean;
 }
@@ -9,7 +10,6 @@ const navItems = [
   { id: 'index.html', label: 'Home' },
   { id: 'testimonials', label: 'Testimonials' },
   { id: 'about-us', label: 'About Us' },
-  { id: 'contact', label: 'Contact' },
 ];
 ---
 
@@ -27,6 +27,7 @@ const navItems = [
           </a>
         ))
       }
+      <ContactButton client:load />
     </ul>
   </nav>
 </header>
