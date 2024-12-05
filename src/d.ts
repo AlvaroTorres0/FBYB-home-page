@@ -7,7 +7,6 @@ export const PropertyInsightSchema = z.object({
   description: z.string(),
   buttonText: z.string(),
   rowCard: z.boolean(),
-  buttonBlue: z.boolean(),
   imageUrlMobile: z.string(),
   imageUrlDesktop: z.string(),
   imageAltText: z.string().optional(),

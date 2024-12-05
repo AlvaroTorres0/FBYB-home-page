@@ -5,6 +5,7 @@ import NavbarDesktop from '../components/header/NavbarDesktop.astro';
 import Home from '../sections/AboutPage/Home.astro';
 import Mission from '../sections/AboutPage/Mission.astro';
 import CoreValues from '../sections/AboutPage/CoreValues.astro';
+import Experts from '../sections/AboutPage/Experts/Experts.astro';
 ---
 
 <Layout title="">
@@ -14,9 +15,10 @@ import CoreValues from '../sections/AboutPage/CoreValues.astro';
   <!-- ? Header section desktop-->
   <NavbarDesktop isLanding={true} />
 
-  <main class="flex flex-col gap-8 md:gap-10 lg:gap-12">
+  <main class="flex flex-col gap-[128px]">
     <Home />
     <Mission />
     <CoreValues />
+    <Experts />
   </main>
 </Layout>

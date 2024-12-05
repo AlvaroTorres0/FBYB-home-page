@@ -10,7 +10,7 @@ const propertiesInsights = await getCollection('properties-insights');
   <div class="rounded-md flex flex-col gap-12 lg:justify-between lg:items-start xl:px-16 lg:py-12 w-full">
     <h2 class="text-[#606773] text-[17px]/[20.74px] lg:text-[16px]/[19-52px] text-center w-full">PROPERTY INSIGHTS & ANALYSIS</h2>
 
-    <article class="flex flex-col gap-16 justify-center items-center w-full lg:flex-row lg:gap-8 xl:gap-12 lg:justify-center">
+    <article class="flex flex-col gap-16 justify-center items-start w-full lg:flex-row lg:gap-8 xl:gap-12 lg:justify-center">
       <div class="w-full flex justify-center lg:w-6/12">
         <PropertyCard
           property={{
@@ -22,7 +22,6 @@ const propertiesInsights = await getCollection('properties-insights');
             title: 'Dubai’s Real Estate Trends 2025: Key Insights for Investors',
             description: 'A comprehensive look at Dubai’s market trends for 2024, analyzing growth sectors and investment opportunities.',
             buttonText: 'Read More',
-            buttonBlue: true,
             rowCard: false,
           }}
         />
@@ -42,7 +41,6 @@ const propertiesInsights = await getCollection('properties-insights');
                   title: property.data.title,
                   description: property.data.description,
                   buttonText: property.data.buttonText,
-                  buttonBlue: property.data.buttonBlue,
                   rowCard: property.data.rowCard,
                 }}
               />

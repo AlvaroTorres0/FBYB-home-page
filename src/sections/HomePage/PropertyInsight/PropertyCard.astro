@@ -34,26 +34,15 @@ const { property } = Astro.props;
     </p>
 
     <button
-      class={`rounded-md py-2 max-w-max w-full px-4 flex items-center gap-2 mt-3 hover:scale-105 transition-all duration-200 ${property.buttonBlue ? 'bg-[#002348] text-yellow' : 'border-[1px] border-[#0023484D] bg-transparent text-blueBg'}`}
+      class={`rounded-md py-2 max-w-max w-full px-4 flex items-center gap-2 mt-3 hover:scale-105 transition-all duration-200 border-[1px] border-[#0023484D] bg-transparent text-blueBg hover:bg-[#002348] hover:text-yellow group`}
     >
       <span class="text-[14px]/[14.28px] xl:text-lg font-normal">
         {property.buttonText}
       </span>
-      {
-        property.buttonBlue ? (
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiNFOEQ2QUQiIGQ9Ik0xNS4xODcgMTJMNy40NyA0LjI4NXEtLjIyMS0uMjIxLS4yMTgtLjUzMnEuMDAzLS4zMS4yMjQtLjUzMlE3LjY5OCAzIDguMDA5IDNxLjMxIDAgLjUzMi4yMjFsNy42MzYgNy42NDNxLjI0Mi4yNDIuMzU0LjU0dC4xMTEuNTk2dC0uMTExLjU5NnQtLjM1NC41NEw4LjUzNSAyMC43OHEtLjIyMi4yMjEtLjUzLjIxOHEtLjMwNy0uMDAzLS41MjgtLjIyNHQtLjIyMS0uNTMydC4yMjEtLjUzMXoiLz48L3N2Zz4="
-            alt="Arrow icon"
-            class="object-contain h-6 w-6"
-          />
-        ) : (
-          <img
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDIzNDgiIGQ9Ik0xNS4xODcgMTJMNy40NyA0LjI4NXEtLjIyMS0uMjIxLS4yMTgtLjUzMnEuMDAzLS4zMS4yMjQtLjUzMlE3LjY5OCAzIDguMDA5IDNxLjMxIDAgLjUzMi4yMjFsNy42MzYgNy42NDNxLjI0Mi4yNDIuMzU0LjU0dC4xMTEuNTk2dC0uMTExLjU5NnQtLjM1NC41NEw4LjUzNSAyMC43OHEtLjIyMi4yMjEtLjUzLjIxOHEtLjMwNy0uMDAzLS41MjgtLjIyNHQtLjIyMS0uNTMydC4yMjEtLjUzMXoiLz48L3N2Zz4="
-            alt="Arrow icon"
-            class="object-contain h-6 w-6"
-          />
-        )
-      }
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path class="group-hover:fill-[#E8D6AD]" fill="#002348" d="m8.006 21.308l-1.064-1.064L15.187 12L6.942 3.756l1.064-1.064L17.314 12z"></path>
+      </svg>
     </button>
   </div>
 </article>

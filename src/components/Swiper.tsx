@@ -28,6 +28,7 @@ export const Gallery: React.FC<GalleryProps> = ({ images }) => {
       delay: 3000,
       disableOnInteraction: true,
     },
+    loop: true,
     ...swiperGlobals,
     mousewheel: false,
     grabCursor: false,

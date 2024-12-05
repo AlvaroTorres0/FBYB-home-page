@@ -1,0 +1,26 @@
+---
+import SectionStructure from '../../../structures/SectionStructure.astro';
+import { ExpertsCarousel } from './Swiper';
+---
+
+<SectionStructure idSection="our-mission">
+  <div class="rounded-md flex flex-col items-center gap-12 xl:px-16 lg:py-12 lg:flex-row w-full lg:min-h-[80vh] justify-center">
+    <article class="w-full flex flex-col gap-16 lg:w-6/12 xl:w-5/12 h-full">
+      <div class="flex flex-col items-center gap-6 px-6 h-full">
+        <span class="text-[16px]/[19.52px] text-[#606773] font-normal">MEET OUR EXPERTS</span>
+        <p class="text-[#606773] text-[16px]/[23.68px] font-light text-center">
+          Our team of experienced professionals brings a wealth of expertise in Dubai’s real estate market. With diverse backgrounds and deep industry knowledge, each team member is dedicated to
+          helping clients make the most informed decisions. Get to know the people who will guide you through your investment journey.
+        </p>
+      </div>
+
+      <div class="flex gap-4 justify-start w-max relative z-40">
+        <img src="/public/assets/experts/thumbnails.png" alt="" />
+      </div>
+    </article>
+
+    <article class="flex gap-4 justify-start w-full overflow-hidden -mt-28 lg:mt-0 lg:w-7/12">
+      <ExpertsCarousel client:visible />
+    </article>
+  </div>
+</SectionStructure>

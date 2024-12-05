@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { Navigation, Autoplay, Mousewheel } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import './SwiperStyles.css';
 import 'swiper/css';
 import 'swiper/swiper-bundle.css';
@@ -18,6 +18,7 @@ export const LocationsProps = {
   spaceBetween: 25,
   slidesPerView: 1.9,
   navigation: true,
+  loop: true,
   breakpoints: {
     480: {
       slidesPerView: 2,
@@ -36,7 +37,7 @@ export const LocationsProps = {
       spaceBetween: 6,
     },
     1248: {
-      slidesPerView: 7,
+      slidesPerView: 5.8,
       spaceBetween: 20,
     },
   },
@@ -93,7 +94,7 @@ interface Location {
 
 const LocationCard: React.FC<Location> = ({ id, name, image }) => {
   return (
-    <article className="flex flex-col gap-2 max-w-[380px] w-full sm:max-w-[280px] lg:max-w-[170px] mb-10" key={id}>
+    <article className="flex flex-col gap-2 max-w-[380px] w-full sm:max-w-[280px] lg:max-w-[170px] xl:max-w-[190px] mb-10" key={id}>
       <img src={image} alt={`Image ${name}`} className="w-full h-full rounded-md max-h-[330px] object-contain" />
       <div className="w-full border-2 border-[#C2A86A] rounded-sm py-3 text-center">
         <h5 className="text-xs lg:text-[14px]/[19.04px] font-light">{name}</h5>
