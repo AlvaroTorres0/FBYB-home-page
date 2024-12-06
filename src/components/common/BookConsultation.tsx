@@ -9,7 +9,7 @@ const BookConsultationButton = () => {
     openPopUpModal();
   };
   return (
-    <button className="flex gap-3 items-center p-0.5 bg-blue rounded-[4px] w-max fixed bottom-5 right-0 z-50" onClick={handleOpenPopUpModal}>
+    <button className="flex gap-3 items-center p-0.5 bg-blue rounded-[4px] w-max fixed bottom-[20px] right-[20px] lg:bottom-[30px] lg:right-[30px] z-50" onClick={handleOpenPopUpModal}>
       <div className="bg-yellow flex justify-center items-center p-2">
         <img
           src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjgiIGhlaWdodD0iMTI4IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMwMDE3MzAiIGQ9Ik02LjYyIDEwLjc5YzEuNDQgMi44MyAzLjc2IDUuMTUgNi41OSA2LjU5bDIuMi0yLjJjLjI4LS4yOC42Ny0uMzYgMS4wMi0uMjVjMS4xMi4zNyAyLjMyLjU3IDMuNTcuNTdhMSAxIDAgMCAxIDEgMVYyMGExIDEgMCAwIDEtMSAxQTE3IDE3IDAgMCAxIDMgNGExIDEgMCAwIDEgMS0xaDMuNWExIDEgMCAwIDEgMSAxYzAgMS4yNS4yIDIuNDUuNTcgMy41N2MuMTEuMzUuMDMuNzQtLjI1IDEuMDJ6Ii8+PC9zdmc+"
